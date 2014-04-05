@@ -20,9 +20,9 @@ def GetBoardTasks():
 
         for x in trelloList.list_cards():
             taskNames.append(x.name)
-            wikiMarkup += '** {0} -  \n'.format(x.name)
+            wikiMarkup += '** {0} - \n'.format(x.name)
         dictionary[trelloList.name] = taskNames
-
+        wikiMarkup += '\n'
     return wikiMarkup
 
 class Command(BaseCommand):
